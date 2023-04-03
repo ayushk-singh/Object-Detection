@@ -1,7 +1,10 @@
 import cv2
 import numpy as np
 
-net = cv2.dnn.readNet('yolov3-tiny.weights', 'yolov3-tiny.cfg')
+weight_name = 'yolov3-tiny.weights'
+config_name = 'yolov3-tiny.cfg'
+
+net = cv2.dnn.readNet(weight_name, config_name)
 
 classes = []
 with open("classes.txt", "r") as f:
